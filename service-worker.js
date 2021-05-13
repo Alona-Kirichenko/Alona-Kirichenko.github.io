@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.f0e1bcb9986e59dbd56722b8465e0e9e.js"
+  "/precache-manifest.faa0cc5a737b0b390c2ed1de40b40582.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "new-labb-4"});
@@ -34,3 +34,4 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute("https://cat-fact.herokuapp.com/facts", new workbox.strategies.NetworkFirst({ "networkTimeoutSeconds":5, plugins: [] }), 'GET');
+workbox.routing.registerRoute("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita", new workbox.strategies.NetworkFirst({ "networkTimeoutSeconds":5, plugins: [] }), 'GET');
